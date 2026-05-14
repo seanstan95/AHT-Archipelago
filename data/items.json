@@ -1,0 +1,251 @@
+[
+    {
+        "name": "Double Jump",
+        "id": 1,
+        "classification": 1
+    },
+    {
+        "name": "Pole Spin",
+        "id": 2,
+        "classification": 1
+    },
+    {
+        "name": "Wing Shield",
+        "id": 3,
+        "classification": 1
+    },
+    {
+        "name": "Wall Kick",
+        "id": 4,
+        "classification": 1
+    },
+    {
+        "name": "Dark Gem",
+        "id": 8,
+        "classification": 25,
+        "count": 40
+    },
+    {
+        "name": "Light Gem",
+        "id": 9,
+        "classification": 25,
+        "count": 100
+    },
+    {
+        "name": "Dragon Egg",
+        "id": 10,
+        "classification": 0,
+        "count": 80
+    },
+    {
+        "name": "Fire Breath",
+        "id": 14,
+        "classification": 1
+    },
+    {
+        "name": "Electric Breath",
+        "id": 5,
+        "classification": 1
+    },
+    {
+        "name": "Water Breath",
+        "id": 6,
+        "classification": 1
+    },
+    {
+        "name": "Ice Breath",
+        "id": 7,
+        "classification": 1
+    },
+    {
+        "name": "Swim",
+        "id": 11,
+        "classification": 1,
+        "option": [{"option": "randomize_movement", "value": 1}]
+    },
+    {
+        "name": "Glide",
+        "id": 12,
+        "classification": 1,
+        "option": [{"option": "randomize_movement", "value": 1}]
+    },
+    {
+        "name": "Charge",
+        "id": 13,
+        "classification": 1,
+        "option": [{"option": "randomize_movement", "value": 1}]
+
+    },
+    {
+        "name": "Lockpick",
+        "id": 28,
+        "classification": 25,
+        "count": 52,
+        "option": [
+            {"option": "randomize_shop_items", "value": 1},
+            {"option": "key_rings", "value": 0}
+        ]
+    },
+    {
+        "name": "Health Unit+",
+        "id": 15,
+        "classification": 2,
+        "option": [{"option": "randomize_shop_items", "value": 1}]
+    },
+    {
+        "name": "Butterfly Jar",
+        "id": 25,
+        "classification": 2,
+        "option": [{"option": "randomize_shop_items", "value": 1}]
+    },
+    {
+        "name": "Double Gems",
+        "id": 26,
+        "classification": 2,
+        "option": [{"option": "randomize_shop_items", "value": 1}]
+    },
+    {
+        "name": "Shockwave",
+        "id": 27,
+        "classification": 2,
+        "option": [{"option": "randomize_shop_items", "value": 1}]
+    },
+    {
+        "name": "Gem Pack",
+        "id": 29,
+        "classification": 0,
+        "count": 9
+    },
+    {
+        "name": "Fire Bomb",
+        "id": 30,
+        "classification": 0,
+        "count": 3
+    },
+    {
+        "name": "Electric Bomb",
+        "id": 31,
+        "classification": 0,
+        "count": 3
+    },
+    {
+        "name": "Water Bomb",
+        "id": 32,
+        "classification": 0,
+        "count": 3
+    },
+    {
+        "name": "Ice Bomb",
+        "id": 33,
+        "classification": 0,
+        "count": 3
+    },
+    {
+        "name": "Dragon Village Key Ring",
+        "id": 34,
+        "classification": 1,
+        "option": [{"option": "key_rings", "value": 1}, {"option": "randomize_shop_items", "value": 1}]
+    },
+    {
+        "name": "Crocovile Swamp Key Ring",
+        "id": 35,
+        "classification": 1,
+        "option": [{"option": "key_rings", "value": 1}, {"option": "randomize_shop_items", "value": 1}]
+    },
+    {
+        "name": "Dragonfly Falls Key Ring",
+        "id": 36,
+        "classification": 1,
+        "option": [{"option": "key_rings", "value": 1}, {"option": "randomize_shop_items", "value": 1}]
+    },
+    {
+        "name": "Coastal Remains Key Ring",
+        "id": 37,
+        "classification": 1,
+        "option": [{"option": "key_rings", "value": 1}, {"option": "randomize_shop_items", "value": 1}]
+    },
+    {
+        "name": "Cloudy Domain Key Ring",
+        "id": 38,
+        "classification": 1,
+        "option": [{"option": "key_rings", "value": 1}, {"option": "randomize_shop_items", "value": 1}]
+    },
+    {
+        "name": "Sunken Ruins Key Ring",
+        "id": 39,
+        "classification": 1,
+        "option": [{"option": "key_rings", "value": 1}, {"option": "randomize_shop_items", "value": 1}]
+    },
+    {
+        "name": "Frostbite Village Key Ring",
+        "id": 40,
+        "classification": 1,
+        "option": [{"option": "key_rings", "value": 1}, {"option": "randomize_shop_items", "value": 1}]
+    },
+    {
+        "name": "Gloomy Glacier Key Ring",
+        "id": 41,
+        "classification": 1,
+        "option": [{"option": "key_rings", "value": 1}, {"option": "randomize_shop_items", "value": 1}]
+    },
+    {
+        "name": "Ice Citadel Key Ring",
+        "id": 42,
+        "classification": 1,
+        "option": [{"option": "key_rings", "value": 1}, {"option": "randomize_shop_items", "value": 1}]
+    },
+    {
+        "name": "Stormy Beach Key Ring",
+        "id": 43,
+        "classification": 1,
+        "option": [{"option": "key_rings", "value": 1}, {"option": "randomize_shop_items", "value": 1}]
+    },
+    {
+        "name": "Molten Mount Key Ring",
+        "id": 44,
+        "classification": 1,
+        "option": [{"option": "key_rings", "value": 1}, {"option": "randomize_shop_items", "value": 1}]
+    },
+    {
+        "name": "Magma Falls Key Ring",
+        "id": 45,
+        "classification": 1,
+        "option": [{"option": "key_rings", "value": 1}, {"option": "randomize_shop_items", "value": 1}]
+    },
+    {
+        "name": "Dark Mine Key Ring",
+        "id": 46,
+        "classification": 1,
+        "option": [{"option": "key_rings", "value": 1}, {"option": "randomize_shop_items", "value": 1}]
+    },
+    {
+        "name": "Red's Laboratory Key Ring",
+        "id": 47,
+        "classification": 1,
+        "option": [{"option": "key_rings", "value": 1}, {"option": "randomize_shop_items", "value": 1}]
+    },
+    {
+        "name": "Dragon Village Access Card",
+        "id": 48,
+        "classification": 1,
+        "option": [{"option": "realm_access", "value": 99}]
+    },
+    {
+        "name": "Coastal Remains Access Card",
+        "id": 49,
+        "classification": 1,
+        "option": [{"option": "realm_access", "value": 99}]
+    },
+    {
+        "name": "Frostbite Village Access Card",
+        "id": 50,
+        "classification": 1,
+        "option": [{"option": "realm_access", "value": 99}]
+    },
+    {
+        "name": "Stormy Beach Access Card",
+        "id": 51,
+        "classification": 1,
+        "option": [{"option": "realm_access", "value": 99}]
+    }
+]

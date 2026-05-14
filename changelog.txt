@@ -1,0 +1,147 @@
+1.0.7
+- Fixed shop items for the 3rd time
+- Fixed typo in notificaiton
+
+1.0.6
+- Improved clarity of key rings
+- Fixed Mecha-Red not being marked as reachable in the tracker
+- Unicode support for shop items
+
+1.0.5
+- Modified YAML option comments to be more clear
+- Update README to include extra notes about the mod
+- Fixed infinite lock-pick bug
+
+1.0.4
+- Fixed logic error at FV: Light Gem beyond Light Gem Door
+- Added new region to Dark Mine due to logic error
+  - Besides the 4 early checks (2 locked chests, 2 beyond light gem door), Dark Mine now requires Charge
+- Fixed incorrect index checking for light gem doors
+
+1.0.3
+- Modified disconnection logic
+  - In game will now correctly tell you the client is not connected if you disconnect the client
+- Modified Double Gems logic
+  - Backend modifications only, functionally exactly the same
+- Fireworks will no longer appear on the tracker if they are not randomized
+- Fixed Starting Realm Access check not being assigned an access card
+- Fixed realm access cards not updating the in game tracker
+- Fixed invalid location being scouted in the shop
+- Fixed incorrect amount of shop locations
+- Fixed mismatched gem pack count
+- Receiving a death link no longer glitches the player if they are climbing a wall as Hunter or Blink
+
+1.0.2
+- Fixed DeathLink not being received
+- Fixed possible softlock with gadgets
+- Removed RealmAccess(shuffled)
+  - Caused too many issues to be worth the effort to keep
+- Re-enabled MiscGoal(all)
+- Disallowed starting outside Dragon Village if Movement and Shop randomization is disabled
+  - At least one of Movement or Shop must be enabled to start outside Dragon Village
+
+1.0.1
+- Fixed shop item patch causing client disconnect
+- Fixed 4 frame notification appearing
+- Fixed mismatched item count for key_rings and realm_access options
+- Fixed non-key ring shop having mismatched item ids
+- Fixed regression in realm access patch
+- Fixed regression in breath rules
+
+1.0.0
+- Added Firework randomization option
+- Added realm access randomization options
+- Added region Key rings
+- Added Starting realm option
+- Added cost randomization of Professor Mole's gadgets
+- Added item and location groups to improve hints and exclusions
+- Added in game map tracker (toggle on pause menu)
+- Bosses can now be toggled to "easy" mode, massively increasing the damage they receive
+- Full client rewrite
+  - Reduced generation failure rate to ~10%
+- Fixed logic error in Dark Mines at the laser turret room
+- Fixed bosses breaking when teleporting out of the arena mid-fight
+
+GameCube Alpha 8 (0.3.3)
+- Added DeathLink support
+- Added YAML option to toggle elevators being instant to Cloudy Domain, Sunken Ruins and Magma Falls
+- Added YAML option to scout boss rewards
+- Dropped lockpick items no longer function
+- Locked Chests that originally contained junk items are now empty
+- Gem Packs now have a randomized value
+- Increased default shop prices to 500-5000
+- Added icon to launcher
+
+GameCube Alpha 7 (0.3.2)
+- Added YAML options for min and max dark gems
+- Fixed obtaining breaths from killing bosses
+- Fixed Trina showing up at spin poles and swim spots
+- Fixed notification showing wrong light gem door
+- Adjusted placement of notification text during mini games
+- Added an item group for breaths
+- Renamed Light Gem door locations to remove gem count
+- Fixed Light Gem from boilers location names
+- Fixed incorrect Light Gem door costs and notifications
+- Fixed notifications being skipped
+- Fixed the Gloomy Glacier entrance gate not opening when skipping the button cutscene
+- Gem Packs now grant 1000 gems if Double Gems is active
+- Gem Packs for other players are now correctly priced
+- Fixed Shop Item 57 missing from the shop
+- Fixed not obtaining the breath bombs
+
+GameCuba Alpha 6 (0.3.1)
+- Fixed shop randomization when the setting is not enabled
+
+GameCube Alpha 5 (0.3.0)
+- Added randomization of Moneybag's store
+  - This adds Shockwave, Butterfly Jar, Sparx HP Upgrade, Double Gems and 52 Lockpicks to the item pool
+  - Butterfly Jar will be re-added to the player on death
+  - Double Gems is now permanent
+- Added randomization of Boss Lair door requirement costs
+  - Your goal boss will always be the most expensive of the 4 doors
+  - Going up to the door will show how much it costs
+  - A notification will be dispatched when you acquire enough dark gems to open the door
+- Added randomization of the Light Gem door costs
+  - Going up to the door will show how much it costs
+  - A notification will be disatched when you acquire enough light gems to open the door
+- All locked chests now logically require 52 lockpicks to open
+  - They can still be opened without them, just they are less likely to have something useful inside
+- Added 3 of every bomb type to the filler item pool if shop randomization is enabled
+- Added YAML option to toggle mini game hinting
+- Notifications now appear in-game for received items or death links
+- Shop item costs now generate during generation instead of client-side
+- Fixed Hunter disappearing from Dragon Village after encountering the Mammoth
+- Renamed Lightning Breath to Electric Breath
+- Renamed Extra Health Unit to Health Unit+
+- Renamed Crocoville Swamp to Crocovile Swamp
+- Removed filling in Gem Packs for other games
+
+GameCube Alpha 4 (0.2.1)
+- Overhauled logic using RuleBuilder API
+  - __Minimum version to run is now 0.6.7__
+- Fixed several logic errors
+- Fix item sync (hopefully)
+
+GameCube Alpha 3 (0.2.0):
+- Added randomization of the Elders abilities
+- Added YAML options to randomize ``Swim``, ``Charge`` and ``Glide``
+  - ``Swim`` refers to being able to swim underwater, paddling on the surface is not affected
+- Added starting breath YAML option
+  - ``default`` grants Fire Breath, ``random`` grants a random one of the 4 breaths, and ``none`` removes your starting breath
+- Added randomization of Junk chests (locked chests that contain gems or power ups)
+- Added YAML option to enable all realm teleportation
+  - Enabling this completely changes the logic in many regions (specifically about Double Jump)
+- Added YAML option to enable the Skip Cutscene button
+  - Has some minor visual glitches with the dialogue boxes, but works
+- Added YAML option for alternate goal conditions for all 4 bosses
+- Talking to a mini game NPC will now hint their item rewards
+
+GameCube Alpha 2 (0.1.1):
+- Fixed goaling not working correctly
+- Added options to toggle randomization of mini game rewards
+- Added a debug command to manually release a location
+  - This is due to a bug in the game that very rarely not updates a collectible trigger in some mini games. Only use the command when necessary
+
+GameCube Alpha 1 (0.1.0):
+- Randomized Light Gems, Dark Gems and Dragon Eggs (including Locked Chests and Egg Thieves),
+- Boss lairs now require 10 generic dark gems, opposed to the 10 realm specific gems
