@@ -269,7 +269,7 @@ class SpyroAHTContext(CommonContext):
                         msg = consts.COLOUR_WHITE, "You can now access the Light Gem door in Dark Mine!"
                 self.emu_client.msg_queue.put_nowait(msg)
         
-        for idx, cost in enumerate(self.slot_data['randomize_gadget_costs']):
+        for idx, cost in enumerate(self.slot_data['gadget_costs']):
             if idx in self._checked_gadgets: continue
             if light >= cost:
                 self._checked_gadgets.add(idx)
