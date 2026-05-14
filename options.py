@@ -114,7 +114,7 @@ class RandomizeBossLairDoorCosts(Choice):
     Note: The door to your goal boss will always be the most expensive of the 4.
 
     default: No changes to cost.
-    randomized: Randomizes the cost, between 1 and 40.
+    randomized: Randomizes the cost, defined by the range in **Minimum Boss Lair Door Cost** and **Maximum Boss Lair Door Cost**.
     shuffle: Shuffles the existing costs (10, 20, 30, 40)
     """
     display_name = "Randomize Boss Lair Requirements"
@@ -169,13 +169,33 @@ class LightGemDoorCostMax(Range):
     default = 50
 
 
-class RandomizeGadgetCost(Range):
-    """Randomizes the cost of Ball, Invincibility and Supercharge gadgets.
-    Set to 0 to leave as default cost."""
-    display_name = "Randomize Gadget Costs"
-    range_start = 0
-    range_end = 100
+class RandomizeGadgetCosts(Choice):
+    """Sets the cost of gadgets (ball, invincibilty, supercharge).
+
+    default: No changes to cost.
+    randomized: Randomizes the cost, defined by the range in **Minimum Gadget Cost** and **Maximum Gadget Cost**.
+    shuffle: Shuffles the existing prices (8, 24, 40)."""
+    display_name = "Randomize Gadget Cost"
+    option_default = 0
+    option_randomized = 1
+    option_shuffle = 2
     default = 0
+
+
+class GadgetCostMin(Range):
+    """Sets the minimum cost for gadgets."""
+    display_name = "Minimum Gadget Cost"
+    range_start = 1
+    range_end = 100
+    default = 8
+
+
+class GadgetCostMax(Range):
+    """Sets the maximum cost for gadgets."""
+    display_name = "Maximum Gadget Cost"
+    range_start = 1
+    range_end = 100
+    default = 40
 
 
 class RealmAccess(Choice):
@@ -276,7 +296,9 @@ class SpyroAHTOptions(PerGameCommonOptions):
     boss_lair_door_cost_min: BossLairDoorCostMin
     boss_lair_door_cost_max: BossLairDoorCostMax
 
-    randomize_gadget_costs: RandomizeGadgetCost
+    randomize_gadget_costs: RandomizeGadgetCosts
+    gadget_cost_min: GadgetCostMin
+    gadget_cost_max: GadgetCostMax
 
     realm_access: RealmAccess
     starting_realm: StartingRealm

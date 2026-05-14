@@ -171,8 +171,15 @@ class SpyroAHTWorld(World):
         return Item(name, classifications[name], self.item_name_to_id[name], self.player)
 
     def create_regions(self):
-        if self.options.randomize_gadget_costs.value > 0:
-            self._gadget_costs = [self.random.randint(0, self.options.randomize_gadget_costs.value), self.random.randint(0, self.options.randomize_gadget_costs.value), self.random.randint(0, self.options.randomize_gadget_costs.value)]
+        if self.options.randomize_gadget_costs.value != 0:
+            if self.options.randomize_gadget_costs.value == 2:  # shuffled:
+                self.random.shuffle(self._gadget_costs)
+            else:  # randomized:
+                lmin, lmax = self.options.gadget_cost_min.value, self.options.gadget_cost_max.value
+                if lmin > lmax:
+                    lmin, lmax = lmax, lmin
+
+                self._gadget_costs = [self.random.randint(lmin, lmax) for _ in range(3)]
 
         match self.options.starting_realm.value:
             case 4: # Randomized:
@@ -404,7 +411,8 @@ class SpyroAHTWorld(World):
             "randomize_light_gem_door_costs": self.options.randomize_light_gem_door_costs.value,
             "light_gem_door_costs": self._lg_doors,
 
-            "randomize_gadget_costs": self._gadget_costs,
+            "randomize_gadget_costs": self.options.randomize_gadget_costs.value,
+            "gadget_costs": self._gadget_costs,
 
             "randomize_movement": self.options.randomize_movement.value,
             "randomize_breath": self.options.randomize_breath.value,

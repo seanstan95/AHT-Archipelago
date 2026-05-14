@@ -203,7 +203,7 @@ class DolphinClient(GenericClient):
         if ctx.slot_data["randomize_boss_lair_doors"]:
             dolphin_memory_engine.write_bytes(self.addresses.p_BOSS_COSTS, struct.pack(">BBBB", *ctx.slot_data["boss_lair_costs"]))
         
-        b, i, s = ctx.slot_data['randomize_gadget_costs']
+        b, i, s = ctx.slot_data['gadget_costs']
         dolphin_memory_engine.write_byte(self.addresses.p_BALL_GADGET_COST, b)
         dolphin_memory_engine.write_byte(self.addresses.p_INVINCIBILITY_COST, i)
         dolphin_memory_engine.write_byte(self.addresses.p_SUPERCHARGE_COST, s)

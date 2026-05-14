@@ -93,12 +93,12 @@ class LGDoorRule(Rule):
 
 class BallGadget(Rule):
     def resolve(self, slot_data: dict[str, Any], items: dict[str, int]) -> bool:
-        return self.can_resolve(slot_data) and items.get("Light Gem", 0) >= slot_data["randomize_gadget_costs"][0]
+        return self.can_resolve(slot_data) and items.get("Light Gem", 0) >= slot_data["gadget_costs"][0]
 
 class InvincibilityGadget(Rule):
     def resolve(self, slot_data: dict[str, Any], items: dict[str, int]) -> bool:
-        return self.can_resolve(slot_data) and items.get("Light Gem", 0) >= slot_data["randomize_gadget_costs"][1]
+        return self.can_resolve(slot_data) and items.get("Light Gem", 0) >= slot_data["gadget_costs"][1]
 
 class SuperchargeGadget(Rule):
     def resolve(self, slot_data: dict[str, Any], items: dict[str, int]) -> bool:
-        return self.can_resolve(slot_data) and items.get("Light Gem", 0) >= slot_data["randomize_gadget_costs"][2]
+        return self.can_resolve(slot_data) and items.get("Light Gem", 0) >= slot_data["gadget_costs"][2]
