@@ -38,7 +38,8 @@ KEYS = {
     "MFt": "Magma Falls Top",
     "MFb": "Magma Falls Bottom",
     "DM": "Dark Mine",
-    "RL": "Red's Laboratory"
+    "RL": "Red's Laboratory",
+    "Moneybags": "Shop Items"
 }
 
 
