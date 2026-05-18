@@ -79,6 +79,15 @@ def create_location_groups() -> dict[str, set[str]]:
     return r
 
 
+def create_item_groups() -> dict[str, set[str]]:
+    data = _load_file("items.json")
+    r = defaultdict(set)
+    for item in data:
+        r[item["group"]].add(item["name"])
+
+    return r
+
+
 def _item_name_to_id() -> dict[str, int]:
     data = _load_file("items.json")
     return {i['name']: i['id'] for i in data}
@@ -133,15 +142,7 @@ class SpyroAHTWorld(World):
     options_dataclass = SpyroAHTOptions
     options: SpyroAHTOptions # type: ignore
 
-    item_name_groups = {
-        "Breath": {"Fire Breath", "Ice Breath", "Water Breath", "Electric Breath"},
-        "Key Rings": {
-            "Dragon Village Key Ring", "Crocovile Swamp Key Ring", "Dragonfly Falls Key Ring",
-            "Coastal Remains Key Ring", "Sunken Ruins Key Ring", "Cloudy Domain Key Ring",
-            "Frostbite Village Key Ring", "Gloomy Glacier Key Ring", "Ice Citadel Key Ring",
-            "Stormy Beach Key Ring", "Molten Mount Key Ring", "Magma Falls Key Ring", "Dark Mine Key Ring", "Red's Laboratory Key Ring"
-        }
-    }
+    item_name_groups = create_item_groups()
     location_name_groups = create_location_groups()
     item_name_to_id = _item_name_to_id()
     location_name_to_id = _location_name_to_id()
