@@ -1,3 +1,15 @@
+1.0.9-PhoenixEdits
+- Adjusted logic for 2 items in Coastal Remains
+    - The light gem in Otto's pool now requires glide, and the dragon egg past the piranha pool no longer requires glide
+- Expanded item groups
+    - Added new groups Elder Abilities, Collectibles, Abilities, Filler, and Access Cards
+    - Renamed "Breath" group to "Breaths" to be consistent
+
+1.0.8-PhoenixEdits
+- Fixed bug with Moneybags' shop item #5
+- Re-introduced min and max gadget cost options
+- Added "shop items" as a location group
+
 1.0.7
 - Fixed shop items for the 3rd time
 - Fixed typo in notificaiton
